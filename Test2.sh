@@ -25,8 +25,7 @@ else
                 cd /home/ec2-user/shell-script/
             fi
         else
-            echo "User is root, skipping $i installation"
-    done        
+            echo "User is root, skipping $i installation"      
 fi
 exit 0
 
