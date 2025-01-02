@@ -6,11 +6,6 @@ if [ $USERID -ne 0 ]
 then
     echo "User is not root , running the scrrpt with sudo"
     sudo su -c "cd /home/ec2-user/shell-script/"
-    cd /home/ec2-user/shell-script/
-fi
-
-if [ $USERID -ne 0 ]
-then 
     dnf install mysql -y
     if [ $? -ne 0 ]
     then
@@ -18,8 +13,8 @@ then
         exit 1
     else
         echo "Installing MySQL ... SUCCESS"
-    fi
+    cd /home/ec2-user/shell-script/
 else
-    echo "MySQL is already ... INSTALLED"
+    echo "MySQL is already ... INSTALLED"    
 fi
 exit 0
