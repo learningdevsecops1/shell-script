@@ -17,4 +17,5 @@ then
 else
     echo "User is root, skipping MySQL installation"
 fi
+
 exit 0
