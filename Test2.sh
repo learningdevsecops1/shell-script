@@ -3,14 +3,14 @@
 USERID=$(id -u)
 varcount=$#
 
-if varcount -ne 1
+if [ $varcount -ne 1 ]
 then
     echo "Usage: $0 <package>"
     exit 1
 else 
-    for (( i=1; i<=varcount; i++ ));
-        echo "Installing $i"
+    for (( i=1; i<=varcount; i++ ))
     do
+        echo "Installing $1"
     if [ $USERID -ne 0 ]
         then
             echo "User is not root , running the script with sudo"
