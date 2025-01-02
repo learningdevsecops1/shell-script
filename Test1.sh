@@ -6,6 +6,7 @@ if [ $USERID -ne 0 ]
 then
     echo "User is not root , running the scrrpt with sudo"
     sudo "$0"
+    cd /home/ec2-user/shell-script/
 fi
 
 if [ $USERID -ne 0 ]
