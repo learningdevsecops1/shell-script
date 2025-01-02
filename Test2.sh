@@ -8,7 +8,8 @@ then
     echo "Usage: $0 <package>"
     exit 1
 else 
-    for (( i=1; i<=varcount; i++ ));
+    for (( i=1; i<=varcount; i++ ))
+        echo "Installing $i"
     do
     if [ $USERID -ne 0 ]
         then
@@ -25,5 +26,5 @@ else
         else
             echo "User is root, skipping $i installation"
 fi
-exit 0
+exit 
 
