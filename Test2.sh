@@ -2,7 +2,10 @@
 
 USERID=$(id -u)
 varcount=$#
+LOGS_FOLDER="/var/log/shellscript-logs"
+LOG_FILE=$(echo $0 | cut -d "." -f1 )
 
+exec > >(tee -a $LOGS_FOLDER/$LOG_FILE.log)
 if [ $varcount -eq 0 ]
 then
     echo "Usage: $0 <package>"
