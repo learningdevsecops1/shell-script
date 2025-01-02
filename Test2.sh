@@ -5,7 +5,7 @@ varcount=$#
 LOGS_FOLDER="/var/log/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1 )
 
-exec > LOGS_FOLDER/script.log 2>&1
+exec > $LOGS_FOLDER/script.log 2>&1
 
 if [ $varcount -eq 0 ]
 then
