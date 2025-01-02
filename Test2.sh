@@ -27,5 +27,7 @@ else
         else
             echo "User is root, skipping $i installation"      
 fi
+done
+fi
 exit 0
 
