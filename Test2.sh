@@ -3,7 +3,7 @@
 USERID=$(id -u)
 varcount=$#
 
-if [ $varcount -ne 1 ]
+if [ $varcount -eq 0 ]
 then
     echo "Usage: $0 <package>"
     exit 1
