@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 varcount=$#
-LOGS_FOLDER="/var/log/shellscript-logs"
+LOGS_FOLDER="/home/ec2-user/shell-script/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1 )
 
 exec > $LOGS_FOLDER/script.log 2>&1
