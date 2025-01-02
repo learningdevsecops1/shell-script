@@ -8,6 +8,8 @@ then
     echo "Usage: $0 <package>"
     exit 1
 else 
+    echo "Script started executing at: $(date)"
+    echo "Total number of packages to install: $#"
     for i in "$@"
     do
         if [ $USERID -ne 0 ]
