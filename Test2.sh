@@ -8,12 +8,13 @@ then
     echo "Usage: $0 <package>"
     exit 1
 else 
-    for ( i=1; i<=varcount; i++ ) do
-        if [ $USERID -ne 0 ]
+    for (( i=1; i<=varcount; i++ ));
+    do
+    if [ $USERID -ne 0 ]
         then
             echo "User is not root , running the script with sudo"
             sudo su -c "cd /home/ec2-user/shell-script/ && dnf install $i -y"
-            if [ $? -ne 0 ]
+        if [ $? -ne 0 ]
             then
                 echo "Installing $i ... FAILURE"
                 exit 1
